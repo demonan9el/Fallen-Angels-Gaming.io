@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html>
 
+  <head>
+    <!--This is displayed by web-engines-->
+    <title>Code that is part of a simple website</title>
+    
+<link rel="stylesheet" href="styles.css">
+
+    <!--Start of Style -->
+    <style>
+      
+      body {
+        background-color: lightgray;
+        border: 2px solid black;
+      }
+
+      h1 {
+        background-color: lightblue;
+        border: 2px solid red;
+        color: blue;
+        font-size: 120%;
+        text-align: center;
+      }
+
+      h2 {}
+
+      h3 {}
+
+      p {}
+
+      li {
+        border: 1px solid;
+        color: black;
+        font-size: 100%;
+
+      }
+
+      .bCompass {
+        background-color: white;
+        border: 1px solid red;
+        color: Blue;
+        text-align: center;
+      }
+
+    </style>
+    <!--End of style -->
+
+  </head>
+
+
+  <body onload="checkCookiesNow()">
+
+    <!-- Start of cookie script in body -->
+    <script>
+      function checkCookiesNow() {
+        if (navigator.cookieEnabled == true) {
+          text = "Cookies are enabled on your browser. :)";
+        } else {
+          text = "Cookies are not enabled on your browser. You will get no cookies today. :(";
+        }
+        document.getElementById("listItem1").innerHTML = text;
+      }
+
+    </script>
+    <!-- Start of cookie script in body -->
+
+    <h1>
+      Welcome to the website!
+    </h1>
+
+    <h5>
+      I'm so glad you were able to make it! See below at some of the items that we can do!
+    </h5>
+
+    <ol>
+      <li id="listItem1"></li>
+      <li>
+        <button class="button bCompass" onclick="compassOpen()">Compass</button>
+        <!--Script to call function to lead user to compass in new tab once the button is clicked. -->
+        <script>
+          function compassOpen() {
+            window.open("https://kochcompass.com")
+          }
+
+        </script>
+      </li>
+
+    </ol>
+  </body>
+  <!--Last part of site. This needs to include a link to grab contact information that is not directly seen on the site itself. -->
+  <footer>
+    <a href="">Contact Me</a>
+  </footer>
+
+</html>
